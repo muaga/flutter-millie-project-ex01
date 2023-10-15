@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/pages/logo_page.dart';
-import 'package:untitled/pages/start_page.dart';
+import 'package:untitled/pages/main_login_01.dart';
+import 'package:untitled/pages/main_login_02.dart';
+import 'package:untitled/pages/main_splash.dart';
+import 'package:untitled/themes/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,10 +15,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: "/logo",
+      theme: theme(),
+      initialRoute: "/login01",
       routes: {
-        "/logo": (context) => LogoPage(),
-        "/start": (context) => StartPage(),
+        "/main": (context) => MainSplashPage(),
+        "/login01": (context) => MainLogin01Page(),
+        "/login02": (context) => MainLogin02Page(),
       },
     );
   }
