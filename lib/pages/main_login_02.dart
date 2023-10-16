@@ -3,7 +3,6 @@ import 'package:untitled/components/button/hyper_link.dart';
 import 'package:untitled/components/form/simple_login_list.dart';
 import 'package:untitled/components/text_form/login_text_form.dart';
 import 'package:untitled/themes/colors.dart';
-import 'package:untitled/themes/icons.dart';
 import 'package:untitled/themes/sizes.dart';
 
 class MainLogin02Page extends StatelessWidget {
@@ -13,7 +12,11 @@ class MainLogin02Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: arrowBackIcon,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back_ios, color: kBlack)),
       ),
       resizeToAvoidBottomInset: false,
       body: Padding(
